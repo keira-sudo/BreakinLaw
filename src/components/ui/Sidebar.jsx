@@ -58,8 +58,8 @@ const Sidebar = ({ isCollapsed = false, isMobileOpen = false, onMobileClose }) =
       </div>
       {!isCollapsed && (
         <div className="flex flex-col">
-          <span className="text-lg font-bold text-gradient">BeReady</span>
-          <span className="text-xs text-muted-foreground">Legal Guidance</span>
+          <span className="text-lg font-bold text-gradient">BreakinLaw</span>
+          <span className="text-xs text-muted-foreground">Legal empowerment</span>
         </div>
       )}
     </div>

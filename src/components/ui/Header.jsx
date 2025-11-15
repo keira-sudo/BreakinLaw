@@ -20,8 +20,7 @@ const Header = () => {
 
   const navigation = [
     { name: 'Dashboard', href: '/dashboard', icon: 'Home' },
-    { name: 'Rights Journal', href: '/rights-journal', icon: 'BookOpen' },
-    { name: 'Rights Guides', href: '/rights-guides', icon: 'FileText' },
+   
     { name: 'AI Chat', href: '/ai-chat', icon: 'MessageSquare' }
   ];
 
@@ -37,7 +36,7 @@ const Header = () => {
                 alt="BR Logo" 
                 className="w-10 h-10 object-contain"
               />
-              <span className="text-xl font-bold text-gradient">BeReady</span>
+              <span className="text-xl font-bold text-gradient">BreakinLaw</span>
             </Link>
 
             {/* Auth Links */}
@@ -67,12 +66,8 @@ const Header = () => {
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
           <Link to="/dashboard" className="flex items-center gap-2">
-           <img 
-              src="No background Logo.png" 
-              alt="BR Logo" 
-              className="w-10 h-10 object-contain"
-            />
-            <span className="text-xl font-bold text-gradient">BeReady</span>
+           
+            <span className="text-xl font-bold text-gradient">BreakinLaw</span>
           </Link>
 
           {/* Navigation */}

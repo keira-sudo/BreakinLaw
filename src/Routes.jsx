@@ -12,6 +12,9 @@ import Dashboard from './pages/dashboard';
 import AIChatInterface from './pages/ai-chat-interface';
 import RightsGuides from './pages/rights-guides';
 import RegisterPage from './pages/register';
+import LandingPage from './pages/LandingPage';   
+
+
 
 const Routes = () => {
   return (
@@ -20,7 +23,13 @@ const Routes = () => {
         <ErrorBoundary>
           <ScrollToTop />
           <RouterRoutes>
-            {/* Public routes - redirect to dashboard if authenticated */}
+            {/* PUBLIC landing page – accessible to everyone */}
+            <Route 
+              path="/" 
+              element={<LandingPage />}   // <<< NO ProtectedRoute here
+            />
+
+            {/* Public auth pages - redirect to dashboard if already authenticated */}
             <Route 
               path="/login" 
               element={
@@ -37,9 +46,8 @@ const Routes = () => {
                 </ProtectedRoute>
               } 
             />
-            
+
             {/* Protected routes - require authentication */}
-            <Route path="/" element={<Navigate to="/dashboard" replace />} />
             <Route 
               path="/dashboard" 
               element={
@@ -81,7 +89,7 @@ const Routes = () => {
                 </ProtectedRoute>
               } 
             />
-            
+
             {/* 404 route */}
             <Route path="*" element={<NotFound />} />
           </RouterRoutes>

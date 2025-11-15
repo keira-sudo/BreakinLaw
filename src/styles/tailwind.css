@@ -7,7 +7,7 @@
 @layer base {
   :root {
     /* Core Colors */
-    --color-background: #F8FAFC; /* slate-50 */
+    --color-background: #FFFF; /* slate-50 */
     --color-foreground: #0F172A; /* slate-900 */
     --color-border: #E2E8F0; /* slate-200 */
     --color-input: #FFFFFF; /* white */
@@ -26,11 +26,11 @@
     --color-muted-foreground: #64748B; /* slate-500 */
     
     /* Primary Colors */
-    --color-primary: #016eea; /* cyan-600 */
+    --color-primary: #32a28b; /* cyan-600 */
     --color-primary-foreground: #FFFFFF; /* white */
     
     /* Secondary Colors */
-    --color-secondary: #7C3AED; /* teal-600 */
+    --color-secondary: #32a28b; /* teal-600 */
     --color-secondary-foreground: #FFFFFF; /* white */
     
     /* Accent Colors */

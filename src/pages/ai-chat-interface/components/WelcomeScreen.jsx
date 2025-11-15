@@ -74,17 +74,14 @@ const WelcomeScreen = ({ onStartChat }) => {
     <div className="flex-1 overflow-y-auto">
       <div className="max-w-4xl mx-auto px-4 py-8">
         {/* Welcome Header */}
-        <div className="text-center mb-12">
-          <div className="w-24 h-24 rounded-2xl from-primary to-secondary flex items-center justify-center mx-auto mb-4">
-            <img src="/Logofinale.png" alt="" />
+        <div className="text-center mb-6">
+          <div className="w-24 h-24 rounded-2xl from-primary to-secondary flex items-center justify-center mx-auto mb-">
+            <img src="/no background b2c.png" alt="logo" />
           </div>
           <h1 className="text-3xl font-bold text-foreground mb-4">
-            Welcome to BeReady Legal Assistant
+            Welcome to BreakinLaw
           </h1>
-          <p className="text-lg text-muted-foreground max-w-2xl mx-auto leading-relaxed">
-            Get instant, reliable guidance on your UK housing, tenancy, and consumer rights. 
-            Ask questions in plain English and receive step-by-step action plans based on verified UK law.
-          </p>
+          
         </div>
 
         {/* Trust Signals */}

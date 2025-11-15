@@ -13,7 +13,7 @@ const ChatHeader = ({ onNewChat, onClearChat, messageCount = 0 }) => {
           </div>
           <div>
             <h2 className="text-sm font-semibold text-foreground">
-              BeReady Legal Assistant
+              BreakinLaw Legal Assistant
             </h2>
             <div className="flex items-center gap-2">
               <div className="w-2 h-2 bg-success rounded-full"></div>

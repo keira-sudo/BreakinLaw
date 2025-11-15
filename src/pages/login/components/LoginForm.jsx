@@ -17,12 +17,7 @@ const LoginForm = () => {
   const { signIn } = useAuth();
   const navigate = useNavigate();
 
-  // Demo credentials from migration
-  const demoCredentials = [
-    { role: 'Admin', email: 'admin@beready.uk', password: 'admin123' },
-    { role: 'User', email: 'user@beready.uk', password: 'user123' },
-    { role: 'Legal Expert', email: 'expert@beready.uk', password: 'expert123' }
-  ];
+ 
 
   const handleChange = (e) => {
     const { name, value } = e?.target;
@@ -145,46 +140,7 @@ const LoginForm = () => {
           {isLoading ? 'Signing in...' : 'Sign in'}
         </Button>
 
-        {/* Demo Credentials Section */}
-        <div className="mt-8 p-4 bg-gray-50 rounded-lg border">
-          <div className="flex items-center justify-between mb-3">
-            <h3 className="text-sm font-medium text-gray-700">Demo Credentials</h3>
-            <button
-              type="button"
-              onClick={() => setShowDemoCredentials(!showDemoCredentials)}
-              className="text-xs text-blue-600 hover:text-blue-500 font-medium"
-            >
-              {showDemoCredentials ? 'Hide' : 'Show'}
-            </button>
-          </div>
-          
-          {showDemoCredentials && (
-            <div className="space-y-2">
-              {demoCredentials?.map((cred, index) => (
-                <div 
-                  key={index} 
-                  className="flex items-center justify-between p-2 bg-white rounded border text-xs"
-                >
-                  <div>
-                    <div className="font-medium text-gray-700">{cred?.role}</div>
-                    <div className="text-gray-500">{cred?.email}</div>
-                    <div className="text-gray-500">{cred?.password}</div>
-                  </div>
-                  <button
-                    type="button"
-                    onClick={() => fillDemoCredentials(cred)}
-                    className="ml-2 px-2 py-1 text-xs bg-blue-100 text-blue-600 rounded hover:bg-blue-200"
-                  >
-                    Use
-                  </button>
-                </div>
-              ))}
-              <p className="text-xs text-gray-500 mt-2">
-                These are test accounts for demonstration purposes only.
-              </p>
-            </div>
-          )}
-        </div>
+        
 
         <div className="text-center">
           <p className="text-sm text-gray-600">

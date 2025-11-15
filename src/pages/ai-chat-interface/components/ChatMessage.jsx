@@ -97,7 +97,7 @@ const ChatMessage = ({ message, onSaveToJournal, onExportPDF, onFeedback }) => {
               <Icon name="Scale" size={16} color="white" />
             </div>
             <div>
-              <span className="text-sm font-medium text-foreground">BeReady Legal Assistant</span>
+              <span className="text-sm font-medium text-foreground">BreakinLaw Legal Assistant</span>
               <div className="flex items-center gap-2 mt-1">
                 <div className="w-2 h-2 bg-success rounded-full"></div>
                 <span className="text-xs text-muted-foreground">
