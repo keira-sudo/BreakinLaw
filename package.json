@@ -1,6 +1,7 @@
 {
-  "name": "beready",
+  "name": "breakinlaw",
   "version": "0.1.0",
+  "homepage": "https://keira-sudo.github.io/BreakinLaw",
   "private": true,
   "rocketCritical": {
     "dependencies": [

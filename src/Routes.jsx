@@ -1,5 +1,5 @@
 import React from "react";
-import { BrowserRouter, Routes as RouterRoutes, Route, Navigate } from "react-router-dom";
+import { BrowserRouter, Routes as RouterRoutes, Route, Navigate, HashRouter } from "react-router-dom";
 import ScrollToTop from "components/ScrollToTop";
 import ErrorBoundary from "components/ErrorBoundary";
 import { AuthProvider } from './contexts/AuthContext';
@@ -18,7 +18,7 @@ import LandingPage from './pages/LandingPage';
 
 const Routes = () => {
   return (
-    <BrowserRouter>
+    <HashRouter>
       <AuthProvider>
         <ErrorBoundary>
           <ScrollToTop />
@@ -95,7 +95,7 @@ const Routes = () => {
           </RouterRoutes>
         </ErrorBoundary>
       </AuthProvider>
-    </BrowserRouter>
+    </HashRouter>
   );
 };
 
