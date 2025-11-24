@@ -4,7 +4,7 @@ import Button from '../../../components/ui/Button';
 
 const ChatHeader = ({ onNewChat, onClearChat, messageCount = 0 }) => {
   return (
-    <div className="border-b border-border bg-card px-4 py-3">
+    <div className="w-full rounded-2xl bg-white/5 border border-white/10 px-4 py-3 backdrop-blur text-white">
       <div className="flex items-center justify-between">
         {/* Left Section - AI Info */}
         <div className="flex items-center gap-3">
@@ -12,14 +12,12 @@ const ChatHeader = ({ onNewChat, onClearChat, messageCount = 0 }) => {
             <Icon name="Scale" size={20} color="white" />
           </div>
           <div>
-            <h2 className="text-sm font-semibold text-foreground">
+            <h2 className="text-sm font-semibold text-white">
               BreakinLaw Legal Assistant
             </h2>
-            <div className="flex items-center gap-2">
+            <div className="flex items-center gap-2 text-xs text-slate-300">
               <div className="w-2 h-2 bg-success rounded-full"></div>
-              <span className="text-xs text-muted-foreground">
-                Online • UK Jurisdiction
-              </span>
+              <span>Online • UK Jurisdiction</span>
             </div>
           </div>
         </div>
@@ -28,9 +26,9 @@ const ChatHeader = ({ onNewChat, onClearChat, messageCount = 0 }) => {
         <div className="flex items-center gap-2">
           {/* Message Counter */}
           {messageCount > 0 && (
-            <div className="hidden sm:flex items-center gap-1 px-2 py-1 bg-muted/50 rounded-full">
-              <Icon name="MessageSquare" size={12} className="text-muted-foreground" />
-              <span className="text-xs text-muted-foreground">
+            <div className="hidden sm:flex items-center gap-1 px-2 py-1 bg-white/10 rounded-full">
+              <Icon name="MessageSquare" size={12} className="text-slate-200" />
+              <span className="text-xs text-slate-200">
                 {messageCount} message{messageCount !== 1 ? 's' : ''}
               </span>
             </div>
@@ -45,9 +43,9 @@ const ChatHeader = ({ onNewChat, onClearChat, messageCount = 0 }) => {
               iconPosition="left"
               iconSize={14}
               onClick={onClearChat}
-              className="text-xs text-muted-foreground hover:text-destructive"
+              className="text-xs text-slate-300 hover:text-red-400 hover:bg-white/10"
             >
-              <span className="hidden sm:inline">Clear Chat</span>
+              <span className="hidden sm:inline">Clear chat</span>
             </Button>
           )}
 
@@ -59,29 +57,36 @@ const ChatHeader = ({ onNewChat, onClearChat, messageCount = 0 }) => {
             iconPosition="left"
             iconSize={14}
             onClick={onNewChat}
-            className="text-xs"
+            className="text-xs border-white/30 text-slate-100 hover:bg-white/10"
           >
-            <span className="hidden sm:inline">New Chat</span>
+            <span className="hidden sm:inline">New chat</span>
           </Button>
         </div>
       </div>
+
       {/* Quick Stats */}
       {messageCount > 0 && (
-        <div className="mt-3 pt-3 border-t border-border">
-          <div className="flex items-center justify-between text-xs text-muted-foreground">
+        <div className="mt-3 pt-3 border-t border-white/10">
+          <div className="flex items-center justify-between text-xs text-slate-300">
             <div className="flex items-center gap-4">
               <div className="flex items-center gap-1">
                 <Icon name="Clock" size={12} />
-                <span>Session started {new Date()?.toLocaleTimeString('en-GB', { hour: '2-digit', minute: '2-digit' })}</span>
+                <span>
+                  Session started{' '}
+                  {new Date()?.toLocaleTimeString('en-GB', {
+                    hour: '2-digit',
+                    minute: '2-digit',
+                  })}
+                </span>
               </div>
               <div className="flex items-center gap-1">
                 <Icon name="Shield" size={12} />
-                <span>Secure & Private</span>
+                <span>Secure &amp; private</span>
               </div>
             </div>
             <div className="flex items-center gap-1">
               <Icon name="MapPin" size={12} />
-              <span>UK Law Applied</span>
+              <span>UK law applied</span>
             </div>
           </div>
         </div>

@@ -26,7 +26,7 @@ const TrustIndicators = () => {
       <div className="text-center">
         <div className="inline-flex items-center gap-2 px-4 py-2 bg-success/10 border border-success/20 rounded-full">
           <Icon name="MapPin" size={16} className="text-success" />
-          <span className="text-sm font-medium text-success">UK Jurisdiction Only</span>
+          <span className="text-sm font-medium text-success ">UK Jurisdiction Only</span>
         </div>
       </div>
       {/* Trust badges */}

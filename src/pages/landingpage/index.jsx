@@ -27,15 +27,16 @@ const LandingPage = () => {
       <header className="w-full bg-transparent absolute top-0 left-0 z-50">
         <div className="max-w-6xl mx-auto px-4 lg:px-6 py-3 flex items-center justify-between">
           <div className="flex items-center gap-2">
-            <span className="text-lg font-semibold text-sky-600">BreakinLaw</span>
+            <span className="text-lg font-semibold text-sky-600 text-white">BreakinLaw</span>
           </div>
 
           <div className="flex items-center gap-6 text-sm">
             <button
               type="button"
-              onClick={() => navigate('/')}
-              className="text-slate-100 hover:text-white"
+              onClick={() => navigate('/News')}
+              className="hover:text-white w-28 h-10 rounded-xl text-sm font-semibold bg-sky-500 hover:bg-sky-600 text-white whitespace-nowrap transition-colors"
             >
+              
               Latest News
             </button>
           </div>
@@ -83,9 +84,17 @@ const LandingPage = () => {
                   <img
                     src="clouddd.png"
                     alt="cloud"
-                    className="pointer-events-none absolute right-[-60%] top-32 w-[420px] opacity-90"
+                    className="pointer-events-none absolute right-[-60%] top-36 w-[420px] opacity-90"
                     aria-hidden="true"
                   />
+
+                  <img
+                    src="clouddd.png"
+                    alt="cloud"
+                    className="pointer-events-none absolute left-[-60%] top-6 w-[420px] opacity-90"
+                    aria-hidden="true"
+                  />
+
 
 
 
@@ -102,7 +111,7 @@ const LandingPage = () => {
                 <div className="rounded-[28px] bg-white shadow-[0_18px_50px_rgba(15,23,42,0.25)] p-2 flex flex-col sm:flex-row items-stretch sm:items-center gap-2">
                   <input
                     type="text"
-                    placeholder="Email or phone number"
+                    placeholder="Enter your e-mail "
                     className="flex-1 px-4 py-3 rounded-2xl text-sm outline-none border-none text-slate-900 placeholder:text-slate-400 bg-transparent"
                   />
                   <button
@@ -116,9 +125,10 @@ const LandingPage = () => {
 
               {/* secondary text */}
               <div className="mt-4 text-center md:text-left">
-                <p className="text-xs text-slate-300 mb-1">
-                  No credit card. No legal jargon. Just clear steps.
+                <p className="text-xs text-slate-300 mb-1 text-center">
+                  No legal jargon. Just clear steps.
                 </p>
+                <div className="text-center">
                 <button
                   type="button"
                   onClick={() => navigate('/login')}
@@ -126,11 +136,14 @@ const LandingPage = () => {
                 >
                   Already have an account? Log in
                 </button>
+                </div>
               </div>
 
               {/* trust row */}
-              <div className="mt-5 flex flex-wrap justify-center md:justify-start gap-x-4 gap-y-2 text-[11px] text-slate-300 text-center">
-                <span className="inline-flex items-center gap-1.5">
+              <div className="mt-5 flex flex-wrap justify-center md:justify-center gap-x-4 gap-y-2 text-[11px] text-slate-300 text-center">
+                
+                
+                <span className="inline-flex items-center gap-1.5 ">
                   <Icon name="ShieldCheck" size={14} />
                   Private &amp; secure
                 </span>
@@ -151,18 +164,18 @@ const LandingPage = () => {
 
         {/* rest of your sections unchanged */}
         {/* HOW IT WORKS */}
-        <section className="bg-white border-t border-slate-100">
-          <div className="max-w-6xl mx-auto px-4 lg:px-6 py-12">
-            <h2 className="text-xs text-sky-600 sm:text-2xl font-semibold text-slate-900 mb-2">
+        <section className="">
+          <div className="max-w-6xl mx-auto px-4 lg:px-6 py-12 ">
+            <h2 className="text-xs text-sky-600 sm:text-2xl font-semibold text-slate-900 mb-2 text-white">
               How BreakinLaw works
             </h2>
-            <p className="text-sm text-slate-600 mb-6 max-w-2xl">
+            <p className="text-sm text-slate-600 mb-6 max-w-2xl text-white">
               In a few minutes, you move from confused and stressed to informed and ready
               for a conversation with a lawyer, if you even need one.
             </p>
 
-            <div className="grid gap-6 md:grid-cols-3">
-              <div className="rounded-2xl border border-slate-100 bg-slate-50/60 p-5">
+            <div className="grid gap-6 md:grid-cols-3 ">
+              <div className="rounded-2xl border border-slate-100 bg-slate-50/60 p-5 bg-white ">
                 <div className="inline-flex h-7 w-7 items-center justify-center rounded-full bg-sky-100 text-xs font-semibold text-sky-700 mb-3">
                   1
                 </div>
@@ -175,7 +188,7 @@ const LandingPage = () => {
                 </p>
               </div>
 
-              <div className="rounded-2xl border border-slate-100 bg-slate-50/60 p-5">
+              <div className="rounded-2xl border border-slate-100 bg-slate-50/60 p-5 bg-white ">
                 <div className="inline-flex h-7 w-7 items-center justify-center rounded-full bg-sky-100 text-xs font-semibold text-sky-700 mb-3">
                   2
                 </div>
@@ -188,7 +201,7 @@ const LandingPage = () => {
                 </p>
               </div>
 
-              <div className="rounded-2xl border border-slate-100 bg-slate-50/60 p-5">
+              <div className="rounded-2xl border border-slate-100 bg-slate-50/60 p-5 bg-white">
                 <div className="inline-flex h-7 w-7 items-center justify-center rounded-full bg-sky-100 text-xs font-semibold text-sky-700 mb-3">
                   3
                 </div>

@@ -13,6 +13,7 @@ import AIChatInterface from './pages/ai-chat-interface';
 import RightsGuides from './pages/rights-guides';
 import RegisterPage from './pages/register';
 import LandingPage from './pages/LandingPage';   
+import News from './pages/News';
 
 
 
@@ -28,6 +29,10 @@ const Routes = () => {
               path="/" 
               element={<LandingPage />}   // <<< NO ProtectedRoute here
             />
+            
+            <Route path="/news" element={<News />} />
+
+
 
             {/* Public auth pages - redirect to dashboard if already authenticated */}
             <Route 

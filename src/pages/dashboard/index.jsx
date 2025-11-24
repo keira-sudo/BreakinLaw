@@ -38,20 +38,6 @@ const Dashboard = () => {
             {/* content container */}
             <div className="relative w-full max-w-6xl mx-auto px-4 lg:px-6">
               {/* tiny signed-in line at very top of hero area */}
-              <div className="mb-6">
-                <p className="text-xs text-slate-500">
-                  Signed in as{' '}
-                  <span className="font-medium text-slate-900">{email}</span> ·
-                  User
-                </p>
-                <p className="text-xs text-slate-500 mt-0.5">
-                  Welcome back,{' '}
-                  <span className="font-semibold text-slate-900">
-                    {displayName}
-                  </span>
-                  .
-                </p>
-              </div>
 
               <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-10">
                 {/* Left: logo + copy */}
@@ -73,9 +59,9 @@ const Dashboard = () => {
                   </div>
 
                   <h1 className="text-4xl md:text-5xl font-bold tracking-tight text-slate-900 mb-4 leading-tight">
-                    The law by the citizens,
+                    Welcome to 
                     <span className="block text-sky-500">
-                      for the citizens.
+                      BreakinLaw
                     </span>
                   </h1>
 
@@ -86,16 +72,7 @@ const Dashboard = () => {
                   </p>
 
                   <div className="flex flex-col sm:flex-row gap-3 sm:items-center mb-4">
-                    <Button
-                      variant="default"
-                      size="lg"
-                      iconName="MessageCircle"
-                      iconPosition="left"
-                      onClick={handleAskQuestion}
-                      className="bg-sky-500 hover:bg-sky-600 w-full sm:w-auto shadow-md shadow-sky-300/60"
-                    >
-                      Start your legal journey
-                    </Button>
+                    
 
                     <Button
                       variant="outline"
@@ -170,6 +147,20 @@ const Dashboard = () => {
                         <span>Save your rights journey as you go</span>
                       </li>
                     </ul>
+
+
+                    
+                    <Button
+                      variant="default"
+                      size="lg"
+                      iconName="MessageCircle"
+                      iconPosition="left"
+                      onClick={handleAskQuestion}
+                      className="bg-sky-500 hover:bg-sky-600 w-full sm:w-auto shadow-md shadow-sky-300/60"
+                    >
+                      Interact freely with AI assistant
+                    </Button>
+
                   </div>
                 </div>
               </div>

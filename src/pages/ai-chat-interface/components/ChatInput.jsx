@@ -13,7 +13,7 @@ const ChatInput = ({ onSendMessage, disabled = false }) => {
     if (message?.trim() || attachedFile) {
       onSendMessage({
         content: message?.trim(),
-        attachment: attachedFile
+        attachment: attachedFile,
       });
       setMessage('');
       setAttachedFile(null);
@@ -32,7 +32,7 @@ const ChatInput = ({ onSendMessage, disabled = false }) => {
 
   const handleTextareaChange = (e) => {
     setMessage(e?.target?.value);
-    
+
     // Auto-resize textarea
     const textarea = e?.target;
     textarea.style.height = 'auto';
@@ -42,7 +42,6 @@ const ChatInput = ({ onSendMessage, disabled = false }) => {
   const handleFileSelect = (e) => {
     const file = e?.target?.files?.[0];
     if (file) {
-      // Validate file type and size
       const allowedTypes = ['application/pdf', 'image/jpeg', 'image/png', 'text/plain'];
       const maxSize = 5 * 1024 * 1024; // 5MB
 
@@ -60,7 +59,7 @@ const ChatInput = ({ onSendMessage, disabled = false }) => {
         name: file?.name,
         size: file?.size,
         type: file?.type,
-        file: file
+        file: file,
       });
     }
   };
@@ -87,17 +86,21 @@ const ChatInput = ({ onSendMessage, disabled = false }) => {
   };
 
   return (
-    <div className="border-t border-border bg-card">
+    <div className="bg-transparent">
       {/* Attachment Preview */}
       {attachedFile && (
-        <div className="px-4 py-3 border-b border-border">
-          <div className="flex items-center gap-3 bg-muted/30 rounded-lg p-3">
-            <Icon name={getFileIcon(attachedFile?.type)} size={20} className="text-primary" />
+        <div className="px-4 py-3 border-b border-white/10">
+          <div className="flex items-center gap-3 bg-white/5 rounded-lg p-3">
+            <Icon
+              name={getFileIcon(attachedFile?.type)}
+              size={20}
+              className="text-teal-300"
+            />
             <div className="flex-1 min-w-0">
-              <p className="text-sm font-medium text-foreground truncate">
+              <p className="text-sm font-medium text-white truncate">
                 {attachedFile?.name}
               </p>
-              <p className="text-xs text-muted-foreground">
+              <p className="text-xs text-slate-300">
                 {formatFileSize(attachedFile?.size)}
               </p>
             </div>
@@ -105,15 +108,16 @@ const ChatInput = ({ onSendMessage, disabled = false }) => {
               variant="ghost"
               size="icon"
               onClick={removeAttachment}
-              className="h-8 w-8"
+              className="h-8 w-8 text-slate-200 hover:bg-white/10"
             >
               <Icon name="X" size={16} />
             </Button>
           </div>
         </div>
       )}
+
       {/* Input Area */}
-      <form onSubmit={handleSubmit} className="p-4">
+      <form onSubmit={handleSubmit} className="p-2 md:p-0">
         <div className="flex items-end gap-3">
           {/* File Attachment Button */}
           <div className="flex-shrink-0">
@@ -130,7 +134,7 @@ const ChatInput = ({ onSendMessage, disabled = false }) => {
               size="icon"
               onClick={() => fileInputRef?.current?.click()}
               disabled={disabled}
-              className="h-10 w-10"
+              className="h-10 w-10 text-slate-200 hover:bg-white/10"
             >
               <Icon name="Paperclip" size={20} />
             </Button>
@@ -145,12 +149,16 @@ const ChatInput = ({ onSendMessage, disabled = false }) => {
               onKeyPress={handleKeyPress}
               placeholder="Ask about your housing, tenancy, or consumer rights in plain English..."
               disabled={disabled}
-              className="w-full min-h-[44px] max-h-[120px] px-4 py-3 pr-12 text-sm bg-background border border-border rounded-2xl resize-none focus:outline-none focus:ring-2 focus:ring-primary/20 focus:border-primary transition-all duration-200 placeholder:text-muted-foreground"
               rows={1}
+              className="w-full min-h-[44px] max-h-[120px] px-4 py-3 pr-12 text-sm
+                         bg-white/5 border border-white/15 rounded-2xl text-white
+                         placeholder:text-slate-400 resize-none
+                         focus:outline-none focus:ring-2 focus:ring-teal-400/40 focus:border-teal-300
+                         transition-all duration-200"
             />
-            
+
             {/* Character count */}
-            <div className="absolute bottom-1 right-12 text-xs text-muted-foreground">
+            <div className="absolute bottom-1 right-12 text-xs text-slate-400">
               {message?.length}/1000
             </div>
           </div>
@@ -170,7 +178,7 @@ const ChatInput = ({ onSendMessage, disabled = false }) => {
         </div>
 
         {/* Helper Text */}
-        <div className="mt-3 flex items-center justify-between text-xs text-muted-foreground">
+        <div className="mt-2 flex items-center justify-between text-xs text-slate-400">
           <div className="flex items-center gap-4">
             <span>Press Enter to send, Shift+Enter for new line</span>
             <span>•</span>
@@ -178,7 +186,7 @@ const ChatInput = ({ onSendMessage, disabled = false }) => {
           </div>
           <div className="flex items-center gap-1">
             <Icon name="Shield" size={12} />
-            <span>UK Legal Guidance</span>
+            <span>UK legal guidance</span>
           </div>
         </div>
       </form>
